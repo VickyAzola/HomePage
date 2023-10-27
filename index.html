@@ -8,26 +8,21 @@
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Project tracking intro component</title>
 </head>
-<body class="min-h-screen overflow-hidden">
+<body class="min-h-screen">
 
-  <header>
+  <header class="flex">
+      <a class="left-0 py-6 px-5 w-16 md:ml-20 md:mt-8" href="#">
+        <img src="images/logo.svg" alt="Sunnyside Logo" />
+      </a>
 
-    <div class="relative flex">
-      <div class="bg-white w-[50%] h-[23rem]">
-        <a class="absolute left-0 py-6 px-5 w-16 md:ml-20 md:mt-8" href="#">
-          <img src="images/logo.svg" alt="Sunnyside Logo" />
+        
+      <div class="button" id="button">
+        <a class="menuBtn md:hidden absolute right-0 py-6 px-5" href="javascript:void(0);" onclick="showNavMenu()">
+          <img src="images/icon-hamburger.svg" alt="Menu Icon" />
         </a>
-      </div>
-
-      <div class="button bg-[#eef3f6] w-[50%] h-[23rem] rounded-bl-[5rem]">
-        <div class="button" id="button">
-          <a class="menuBtn md:hidden absolute right-0 py-6 px-5" href="javascript:void(0);" onclick="showNavMenu()">
-            <img src="images/icon-hamburger.svg" alt="Menu Icon" />
-          </a>
-          <a class="closeBtn md:hidden absolute right-0 py-6 px-5" href="javascript:void(0);" onclick="showNavMenu()">
-            <img src="images/icon-close.svg" alt="Close Icon" />
-          </a>
-        </div>
+        <a class="closeBtn md:hidden absolute right-0 py-6 px-5" href="javascript:void(0);" onclick="showNavMenu()">
+          <img src="images/icon-close.svg" alt="Close Icon" />
+        </a>
       </div>
 
       <nav class="topMenu" id="topMenu" aria-label="navigation header bg-[#eef3f6] ">
@@ -39,15 +34,14 @@
           <li><a class="hover:underline" href="#">Login</a></li>
         </ul>
       </nav>
-    </div>
-
-    <div class="overflow-x-hidden">
-      <img class="absolute top-[15%] md:top-[20%] right-[-10%] w-full md:right-[-15%] md:w-[65%] object-contain" src="images/illustration-devices.svg" alt="Phone and Desktop ilustration">
-    </div>
   </header>
   
-  <main class="my-8 pb-8">
-    <section class="md:absolute md:top-[28%] md:max-w-xl md:pl-20 mx-4">
+  <main class="my-8 pb-8 grid gap-y-40 md:grid-cols-2 md:gap-x-6 md:mt-20">
+    <div class="overflow-hidden md:order-last">
+      <img class="translate-x-[10%]" src="images/illustration-devices.svg" alt="Phone and Desktop ilustration">
+    </div>
+
+    <section class="mx-6 md:pl-20">
       <div class="flex items-center uppercase gap-x-4">
         <p class="text-white bg-[#242942] px-2.5 py-[.2rem] rounded-full font-bold text-sm">New</p>
         <p class="tracking-[.15rem] text-[#a0a1ac]">Monograph Dashboard</p>

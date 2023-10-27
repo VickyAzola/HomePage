@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Barlow', sans-serif;
 }
@@ -9,6 +15,17 @@ h1, nav, a, button {
     font-family: 'Barlow Condensed', sans-serif;
 }
 
+header::before {
+    content: "";
+    position: absolute;
+    background: #eef3f6;
+    width: 50%;
+    height: 26rem;
+    border-bottom-left-radius: 5rem;
+    right: 0;
+    top: 0;
+    z-index:-1;
+}
 
 /*Menu Desktop*/
 .topMenu {
@@ -63,7 +80,7 @@ a.closeBtn {
         z-index: 2;
         inset-inline: 0;
         margin-inline: auto;
-        top: 20%;
+        top: 10%;
         
     }
 
