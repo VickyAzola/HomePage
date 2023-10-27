@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Barlow', sans-serif;
+}
+
+h1, nav, a, button {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+
+/*Menu Desktop*/
+.topMenu {
+    position: absolute;
+    right: 0;
+}
+.topMenu li {
+    float: left;
+    display: block;
+    color: #242942;
+    text-align: center;
+    padding: .6rem 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.topMenu li:last-child {
+    color: #a0a1ac;
+}
+
+a.menuBtn {
+    display: none;
+}
+a.closeBtn {
+    display: none;
+}
+
+/*Menu Mobile*/
+@media screen and (max-width: 767px) {
+    .topMenu li {
+        display: none;
+    }
+    a.menuBtn {
+        float: right;
+        display: block;
+        padding: 1.5rem;
+    }
+    a.closeBtn {
+        display: none;
+    }
+
+    /*white absolute menu*/
+    .topMenu.responsive {
+        background-color: white;
+        box-shadow: -.2rem .2rem 1rem .2rem hsla(230, 29%, 20%, 20%);
+        border-radius: .2rem;
+        padding: 1rem;
+        height: 14rem;
+        width: 88%;
+        position: absolute;
+        z-index: 2;
+        inset-inline: 0;
+        margin-inline: auto;
+        top: 20%;
+        
+    }
+
+    .button.responsive a.menuBtn {
+        display: none;
+    }
+    .button.responsive a.closeBtn {
+        display: block;
+        position: absolute;
+        padding: 1.5rem;
+        right: 0;
+        top: 0;
+    }
+
+    .topMenu.responsive li {
+        color: #242942;
+        letter-spacing: .1rem;
+        float: none;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bolder;
+    }
+    .topMenu li:last-child {
+        border-top: 1px solid #cfcfd7;
+        margin-top: .7rem;
+        padding-top: 1rem;
+        font-family: 'Barlow Condensed', sans-serif;
+        color: #a0a1ac;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Project tracking intro component</title>
+</head>
+<body class="min-h-screen overflow-x-hidden">
+
+  <header>
+
+    <div class="relative flex">
+      <div class="bg-white w-[50%] h-[23rem]">
+        <a class="absolute left-0 py-6 px-5 w-16 md:ml-20 md:mt-8" href="#">
+          <img src="images/logo.svg" alt="Sunnyside Logo" />
+        </a>
+      </div>
+
+      <div class="button bg-[#eef3f6] w-[50%] h-[23rem] rounded-bl-[5rem]">
+        <div class="button" id="button">
+          <a class="menuBtn md:hidden absolute right-0 py-6 px-5" href="javascript:void(0);" onclick="showNavMenu()">
+            <img src="images/icon-hamburger.svg" alt="Menu Icon" />
+          </a>
+          <a class="closeBtn md:hidden absolute right-0 py-6 px-5" href="javascript:void(0);" onclick="showNavMenu()">
+            <img src="images/icon-close.svg" alt="Close Icon" />
+          </a>
+        </div>
+      </div>
+
+      <nav class="topMenu" id="topMenu" aria-label="navigation header bg-[#eef3f6] ">
+        <ul class="md:flex md:items-center md:gap-x-4 md:pt-6 md:pr-24 font-semibold md:font-medium">
+          <li><a class="hover:underline" href="#">Product</a></li>
+          <li><a class="hover:underline" href="#">Features</a></li>
+          <li><a class="hover:underline" href="#">Pricing</a></li>
+          <span class="hidden bg-[#a0a1ac] rounded-full w-1.5 h-1.5 md:inline-block"></span>
+          <li><a class="hover:underline" href="#">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <img class="absolute top-[15%] md:top-[20%] right-[-10%] w-full md:right-[-15%] md:w-[65%]" src="images/illustration-devices.svg" alt="Phone and Desktop ilustration">
+    
+  </header>
+  
+  <main class="my-8 pb-8">
+    <section class="md:absolute md:top-[28%] md:max-w-xl md:pl-20 mx-4">
+      <div class="flex items-center uppercase gap-x-4">
+        <p class="text-white bg-[#242942] px-2.5 py-[.2rem] rounded-full font-bold text-sm">New</p>
+        <p class="tracking-[.15rem] text-[#a0a1ac]">Monograph Dashboard</p>
+      </div>
+      <h1 class="text-[#242942] uppercase my-5 text-4xl font-bold md:text-6xl">Powerful insights into your team</h1>
+      <p class="mb-5 text-[#5b5f71] text-xl md:max-w-xs">Project planning and time tracking for agile teams</p>
+      <div class="flex items-center md:pt-10">
+        <button class="text-white bg-[#ff5c5c] px-6 md:px-8 py-4 rounded-md uppercase font-bold text-xs mr-4 hover:bg-[#fa7f7f]">Schedule a demo</button>
+        <button class="text-[#a0a1ac] px-1 py-2 rounded-md uppercase text-xs tracking-[.1rem]">to see a preview</button>
+      </div>
+    </section>
+  </main>
+  
+
+  <footer class="md:fixed md:bottom-0">
+    <p class="md:ml-24 mb-4 text-center text-xs text-[#a0a1ac]">
+      Challenge by <a class="hover:text-[#ff5c5c] font-bold" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a class="hover:text-[#ff5c5c] font-bold" href="#" target="_blank">Victoria Azola</a>.
+    </p>
+  </footer>
+</body>
+<script src="index.js"></script>
+</html>
